@@ -1,0 +1,50 @@
+
+@keyframes Logo {
+    0%{transform: translatex(-100px);}
+    100%{transform: none;margin-left: 200px;}
+}
+.logo-animation {
+    animation: Logo 1s forwards;
+}
+
+@keyframes Menu-animation{
+    0%{top:-200px;opacity: 1;}
+    100%{top:100;opacity: 1;}
+}
+
+.menu-animation{
+    animation:Menu-animation 1s forwards;
+    animation-delay: .9ms;
+  
+}
+
+@keyframes p-animation {
+    0%{opacity: 0;}
+    100%{opacity:1;}
+}
+
+.animation-basic{
+    animation:p-animation 1s forwards;
+    animation-delay:1s
+}
+
+@keyframes img-animation {
+    0%{right: -1000px;}
+    100%{right:10px}
+}
+
+.img-animation{
+    right:-10px;
+    animation: img-animation .9s forwards;
+    animation-delay:1s;
+}
+
+@keyframes btn-animation{
+    0%{bottom:-1000px;opacity: 1;}
+    100%{bottom:-0;opacity: 1;}
+}
+
+.btn-animation{
+    animation: btn-animation 1s forwards;
+    animation-delay: 1s;
+}

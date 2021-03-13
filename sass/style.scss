@@ -1,0 +1,181 @@
+$color-font :#CDCBB6;
+
+//* Reset
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Akaya Telivigala', cursive;
+    color: #CDCBB6;
+    overflow: hidden;
+}
+
+@import '../sass/animation';
+
+//* MENU
+header {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    margin-left: 10px;
+    left: -400px;
+
+}
+
+.nav-menu {
+    font-size: 20px;
+
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    margin: 10px 15px;
+    padding: 15px;
+
+    &::after {
+        content: '';
+        width: 10px;
+        height: 0px;
+        position: relative;
+        top: -19px;
+        right: 50%;
+
+        transition: .7s ease;
+    }
+
+    &:hover {
+        &::after {
+            content: '';
+            width: 2px;
+            height: 20px;
+            position: relative;
+            top: -19px;
+            right: 50%;
+            background:linear-gradient(180deg, #4BB491 5.87%, #723648 92.93%);;
+        }
+
+    }
+  
+}
+
+
+
+li {
+
+    display: inline-block;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    opacity: 0;
+
+    list-style: none;
+
+   
+}
+
+
+a {
+    color: $color-font;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        transform: scale(1.1)
+    }
+
+}
+
+//* background
+
+
+.fundo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url(../svg/fundo.svg);
+    z-index: -99;
+}
+
+.fundo-div {
+    position: absolute;
+    top: 0;
+    left: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 7, 12, 0.85);
+
+    z-index: -1;
+}
+
+
+
+//* CONTEUDO 
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px;
+
+}
+
+.item-1 {
+    p {
+        color: $color-font;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        opacity: 0;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: orange;
+        opacity: 0;
+       text-align: center;
+       margin-bottom: 20px;
+    }
+}
+
+.item-2 {
+    margin-left: 10px;
+    margin-bottom: 50px;
+
+    img {
+        position: relative;
+        right: -1000px;
+    }
+}
+
+.plataforms {
+    position: relative;
+    bottom: -1000px;
+    opacity: 0;
+    display: flex;
+    margin-top: 20px 0px;
+
+    img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    img:nth-child(1) {
+        margin-right: 30px;
+    }
+}
